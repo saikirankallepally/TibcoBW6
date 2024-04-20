@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:tibex="http://www.tibco.com/bpel/2007/extensions" xmlns:tns="http://www.tibco.com/xml/render/example" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.tibco.com/xml/render/example">
+
+
+
+  <xsd:complexType name="DuplicateDuns">
+  	<xsd:sequence>
+  		<xsd:element name="Duplicate_Duns" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+  		<xsd:element name="Count" type="xsd:string"></xsd:element>
+  	</xsd:sequence>
+  </xsd:complexType>
+
+
+  <xsd:element name="DuplicateDuns" type="tns:DuplicateDuns"></xsd:element>
+
+
+
+</xsd:schema>

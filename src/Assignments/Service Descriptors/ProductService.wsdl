@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.tibco.com/ProductService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ProductService" targetNamespace="http://www.tibco.com/ProductService/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.tibco.com/ProductService/" xmlns:Q1="http://www.example.org/product">
+            <xsd:import namespace="http://www.example.org/product"></xsd:import>
+            <xsd:element name="AddOperation">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="input" type="tns:prod1" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AddOperationResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="out" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetOperation">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="ProductId" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetOperationResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="out" type="tns:prod1"
+      				maxOccurs="unbounded" minOccurs="0">
+      			</xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AddOperationFault">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="MessageCode"
+      				type="xsd:string">
+      			</xsd:element>
+      			<xsd:element name="Message" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetOperationFault">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="MessageCode" type="xsd:string">
+      			</xsd:element>
+      			<xsd:element name="Message" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+    
+      <xsd:complexType name="prod1">
+      	<xsd:sequence>
+      		<xsd:element name="ProductId" type="xsd:string"></xsd:element>
+      		<xsd:element name="ProductName" type="xsd:string"></xsd:element>
+      		<xsd:element name="ProductGroup" type="tns:grp"></xsd:element>
+      		<xsd:element name="ProductStatus" type="xsd:boolean"></xsd:element>
+      		<xsd:element name="ProductAddDate" type="xsd:date"></xsd:element>
+      	</xsd:sequence>
+      </xsd:complexType>
+    
+      <xsd:complexType name="grp">
+      	<xsd:sequence>
+      		<xsd:element name="group" type="xsd:string" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+      	</xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="AddOperationRequest">
+    <wsdl:part element="tns:AddOperation" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="AddOperationResponse">
+    <wsdl:part element="tns:AddOperationResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="GetOperationRequest">
+  	<wsdl:part name="parameters" element="tns:GetOperation"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetOperationResponse">
+  	<wsdl:part name="parameters" element="tns:GetOperationResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="AddOperationFault">
+  	<wsdl:part name="parameters" element="tns:AddOperationFault"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetOperationFault">
+  	<wsdl:part name="parameters" element="tns:GetOperationFault"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ProductService">
+    <wsdl:operation name="AddOperation">
+      <wsdl:input message="tns:AddOperationRequest"/>
+      <wsdl:output message="tns:AddOperationResponse"/>
+            <wsdl:fault name="fault" message="tns:AddOperationFault"></wsdl:fault>
+        </wsdl:operation>
+    <wsdl:operation name="GetOperation">
+    	<wsdl:input message="tns:GetOperationRequest"></wsdl:input>
+    	<wsdl:output message="tns:GetOperationResponse"></wsdl:output>
+            <wsdl:fault name="fault" message="tns:GetOperationFault"></wsdl:fault>
+        </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ProductServiceSOAP" type="tns:ProductService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="AddOperation">
+      <soap:operation soapAction="http://www.tibco.com/ProductService/AddOperation"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProductService">
+    <wsdl:port binding="tns:ProductServiceSOAP" name="ProductServiceSOAP">
+      <soap:address location="http://www.example.org/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:example="http://www.tibco.com/xml/render/example" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="__PXlkFOGEe2FUPS8ghicmQ" name="assignments.DataFormatResource2" type="dataformat:DataFormat">
+  <imports xmi:id="_Y2bwIFUYEe2Ar6LpW2Kp8g" importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.tibco.com/xml/render/example"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="__PXlkVOGEe2FUPS8ghicmQ" formatType="Delimiter separated" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="example:DuplicateDuns" fieldOffsetsStr="Duplicate_Duns(0,0)&#xA;Count(0,0)">
+    <fieldOffsets xmi:id="_Y2wgQFUYEe2Ar6LpW2Kp8g" name="Duplicate_Duns"/>
+    <fieldOffsets xmi:id="_Y2wgQVUYEe2Ar6LpW2Kp8g" name="Count"/>
+  </jndi:configuration>
+</jndi:namedResource>

@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tns.tibco.com/bw/json/1666501744976" elementFormDefault="qualified" targetNamespace="http://tns.tibco.com/bw/json/1666501744976">
+  <complexType name="seedFileFormatElementType">
+    <sequence>
+    	<element maxOccurs="1" minOccurs="0"
+    		name="organization">
+    		<complexType>
+    			<sequence>
+    				<element maxOccurs="1" minOccurs="0" name="duns"
+    					type="string" />
+    				<element maxOccurs="1" minOccurs="0"
+    					name="dunsControlStatus">
+    					<complexType>
+    						<sequence>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="operatingStatus">
+    								<complexType>
+    									<sequence>
+    										<element maxOccurs="1"
+    											minOccurs="0" name="description" type="string" />
+    										<element maxOccurs="1"
+    											minOccurs="0" name="dnbCode" type="integer" />
+    									</sequence>
+    								</complexType>
+    							</element>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="isMarketable" type="boolean" nillable="true"/>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="isMailUndeliverable" type="boolean" nillable="true"/>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="isTelephoneDisconnected" type="boolean" nillable="true"/>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="isDelisted" type="boolean" nillable="true"/>
+    							<element maxOccurs="unbounded"
+    								minOccurs="0" name="subjectHandlingDetails" type="string" nillable="true"/>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="fullReportDate" type="string" nillable="true"/>
+    						</sequence>
+    					</complexType>
+    				</element>
+    				<element maxOccurs="1" minOccurs="0"
+    					name="primaryName" type="string" />
+    				<element maxOccurs="unbounded" minOccurs="0"
+    					name="tradeStyleNames" type="string" nillable="true"/>
+    				<element maxOccurs="unbounded" minOccurs="0"
+    					name="websiteAddress" type="string" nillable="true"/>
+    				<element maxOccurs="unbounded" minOccurs="0"
+    					name="telephone">
+    					<complexType>
+    						<sequence>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="telephoneNumber" type="string" nillable="true"/>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="isdCode" type="string" nillable="true"/>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="isUnreachable" type="boolean" nillable="true"/>
+    						</sequence>
+    					</complexType>
+    				</element>
+    				<element maxOccurs="unbounded" minOccurs="0"
+    					name="fax">
+    					<complexType>
+    						<sequence>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="faxNumber" type="string" nillable="true"/>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="isdCode" type="string" nillable="true"/>
+    						</sequence>
+    					</complexType>
+    				</element>
+    				<element maxOccurs="1" minOccurs="0"
+    					name="primaryAddress">
+    					<complexType>
+    						<sequence>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="language">
+    								<complexType>
+    									<sequence>
+    										<element maxOccurs="1"
+    											minOccurs="0" name="description" type="string" />
+    										<element maxOccurs="1"
+    											minOccurs="0" name="dnbCode" type="integer" />
+    									</sequence>
+    								</complexType>
+    							</element>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="addressCountry">
+    								<complexType>
+    									<sequence>
+    										<element maxOccurs="1"
+    											minOccurs="0" name="name" type="string" />
+    										<element maxOccurs="1"
+    											minOccurs="0" name="isoAlpha2Code" type="string" />
+    										<element maxOccurs="1"
+    											minOccurs="0" name="fipsCode" type="string" nillable="true"/>
+    									</sequence>
+    								</complexType>
+    							</element>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="continentalRegion">
+    								<complexType>
+    									<sequence>
+    										<element maxOccurs="1"
+    											minOccurs="0" name="name" type="string" nillable="true" />
+    									</sequence>
+    								</complexType>
+    							</element>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="addressLocality">
+    								<complexType>
+    									<sequence>
+    										<element maxOccurs="1"
+    											minOccurs="0" name="name" type="string" />
+    									</sequence>
+    								</complexType>
+    							</element>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="minorTownName" type="string" nillable="true" />
+    							<element maxOccurs="1" minOccurs="0"
+    								name="addressRegion">
+    								<complexType>
+    									<sequence>
+    										<element maxOccurs="1"
+    											minOccurs="0" name="name" type="string" nillable="true" />
+    										<element maxOccurs="1"
+    											minOccurs="0" name="abbreviatedName" type="string"
+    											nillable="true" />
+    										<element maxOccurs="1"
+    											minOccurs="0" name="fipsCode" type="string" nillable="true"/>
+    									</sequence>
+    								</complexType>
+    							</element>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="addressCounty">
+    								<complexType>
+    									<sequence>
+    										<element maxOccurs="1"
+    											minOccurs="0" name="name" type="string" />
+    										<element maxOccurs="1"
+    											minOccurs="0" name="fipsCode" type="string" nillable="true"/>
+    									</sequence>
+    								</complexType>
+    							</element>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="postalCode" type="string" nillable="true"/>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="postalCodePosition">
+    								<complexType>
+    									<sequence />
+    								</complexType>
+    							</element>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="streetNumber" type="string" nillable="true" />
+    							<element maxOccurs="1" minOccurs="0"
+    								name="streetName" type="string" nillable="true" />
+    							<element maxOccurs="1" minOccurs="0"
+    								name="streetAddress">
+    								<complexType>
+    									<sequence>
+    										<element maxOccurs="1"
+    											minOccurs="0" name="line1" type="string" nillable="true" />
+    										<element maxOccurs="1"
+    											minOccurs="0" name="line2" type="string" nillable="true" />
+    									</sequence>
+    								</complexType>
+    							</element>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="postOfficeBox">
+    								<complexType>
+    									<sequence />
+    								</complexType>
+    							</element>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="latitude" type="string" nillable="true" />
+    							<element maxOccurs="1" minOccurs="0"
+    								name="longitude" type="string" nillable="true" />
+    							<element maxOccurs="1" minOccurs="0"
+    								name="geographicalPrecision">
+    								<complexType>
+    									<sequence />
+    								</complexType>
+    							</element>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="isRegisteredAddress" type="boolean" nillable="true"/>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="isResidentialAddress" type="string" nillable="true" />
+    							<element maxOccurs="1" minOccurs="0"
+    								name="statisticalArea">
+    								<complexType>
+    									<sequence>
+    										<element maxOccurs="1"
+    											minOccurs="0" name="cbsaName" type="string"
+    											nillable="true" />
+    										<element maxOccurs="1"
+    											minOccurs="0" name="cbsaCode" type="string"
+    											nillable="true" />
+    										<element maxOccurs="1"
+    											minOccurs="0" name="economicAreaOfInfluenceCode"
+    											type="string" />
+    										<element maxOccurs="1"
+    											minOccurs="0" name="populationRank">
+    											<complexType>
+    												<sequence>
+    													<element
+    														maxOccurs="1" minOccurs="0" name="rankNumber"
+    														type="string" />
+    													<element
+    														maxOccurs="1" minOccurs="0" name="rankDnBCode"
+    														type="integer" />
+    													<element
+    														maxOccurs="1" minOccurs="0" name="rankDescription"
+    														type="string" />
+    												</sequence>
+    											</complexType>
+    										</element>
+    									</sequence>
+    								</complexType>
+    							</element>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="locationOwnership">
+    								<complexType>
+    									<sequence />
+    								</complexType>
+    							</element>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="premisesArea">
+    								<complexType>
+    									<sequence />
+    								</complexType>
+    							</element>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="isManufacturingLocation" type="string"
+    								nillable="true" />
+    						</sequence>
+    					</complexType>
+    				</element>
+    				<element maxOccurs="1" minOccurs="0"
+    					name="registeredAddress">
+    					<complexType>
+    						<sequence>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="language">
+    								<complexType>
+    									<sequence>
+    										<element maxOccurs="1"
+    											minOccurs="0" name="description" type="string" />
+    										<element maxOccurs="1"
+    											minOccurs="0" name="dnbCode" type="integer" />
+    									</sequence>
+    								</complexType>
+    							</element>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="addressCountry">
+    								<complexType>
+    									<sequence>
+    										<element maxOccurs="1"
+    											minOccurs="0" name="name" type="string" />
+    										<element maxOccurs="1"
+    											minOccurs="0" name="isoAlpha2Code" type="string" />
+    									</sequence>
+    								</complexType>
+    							</element>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="addressLocality">
+    								<complexType>
+    									<sequence />
+    								</complexType>
+    							</element>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="minorTownName" type="string" nillable="true" />
+    							<element maxOccurs="1" minOccurs="0"
+    								name="addressRegion">
+    								<complexType>
+    									<sequence />
+    								</complexType>
+    							</element>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="addressCounty">
+    								<complexType>
+    									<sequence />
+    								</complexType>
+    							</element>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="postalCode" type="string" nillable="true" />
+    							<element maxOccurs="1" minOccurs="0"
+    								name="postalCodePosition">
+    								<complexType>
+    									<sequence />
+    								</complexType>
+    							</element>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="streetNumber" type="string" nillable="true" />
+    							<element maxOccurs="1" minOccurs="0"
+    								name="streetName" type="string" nillable="true" />
+    							<element maxOccurs="1" minOccurs="0"
+    								name="streetAddress">
+    								<complexType>
+    									<sequence>
+    										<element maxOccurs="1"
+    											minOccurs="0" name="line1" type="string" nillable="true" />
+    										<element maxOccurs="1"
+    											minOccurs="0" name="line2" type="string" nillable="true" />
+    										<element maxOccurs="1"
+    											minOccurs="0" name="line3" type="string" nillable="true" />
+    										<element maxOccurs="1"
+    											minOccurs="0" name="line4" type="string" nillable="true" />
+    									</sequence>
+    								</complexType>
+    							</element>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="postOfficeBox">
+    								<complexType>
+    									<sequence />
+    								</complexType>
+    							</element>
+    						</sequence>
+    					</complexType>
+    				</element>
+    				<element maxOccurs="1" minOccurs="0"
+    					name="mailingAddress">
+    					<complexType>
+    						<sequence />
+    					</complexType>
+    				</element>
+    				<element maxOccurs="unbounded" minOccurs="0"
+    					name="stockExchanges" type="string" nillable="true"/>
+    				<element maxOccurs="unbounded" minOccurs="0"
+    					name="thirdPartyAssessment" type="string" nillable="true"/>
+    				<element maxOccurs="unbounded" minOccurs="0"
+    					name="registrationNumbers">
+    					<complexType>
+    						<sequence>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="registrationNumber" type="string" nillable="true"/>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="typeDescription" type="string" nillable="true"/>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="typeDnBCode" type="integer" nillable="true"/>
+    						</sequence>
+    					</complexType>
+    				</element>
+    				<element maxOccurs="unbounded" minOccurs="0"
+    					name="industryCodes">
+    					<complexType>
+    						<sequence>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="code" type="string" nillable="true"/>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="description" type="string" nillable="true"/>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="typeDescription" type="string" nillable="true"/>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="typeDnBCode" type="integer" nillable="true"/>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="priority" type="integer" nillable="true"/>
+    						</sequence>
+    					</complexType>
+    				</element>
+    				<element maxOccurs="1" minOccurs="0"
+    					name="businessEntityType">
+    					<complexType>
+    						<sequence>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="description" type="string" nillable="true"/>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="dnbCode" type="integer" nillable="true"/>
+    						</sequence>
+    					</complexType>
+    				</element>
+    				<element maxOccurs="1" minOccurs="0"
+    					name="controlOwnershipDate" type="string" nillable="true" />
+    				<element maxOccurs="1" minOccurs="0"
+    					name="startDate" type="string" nillable="true"/>
+    				<element maxOccurs="1" minOccurs="0"
+    					name="controlOwnershipType">
+    					<complexType>
+    						<sequence>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="description" type="string" nillable="true"/>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="dnbCode" type="integer" nillable="true"/>
+    						</sequence>
+    					</complexType>
+    				</element>
+    				<element maxOccurs="1" minOccurs="0" name="isAgent"
+    					type="string" nillable="true" />
+    				<element maxOccurs="1" minOccurs="0"
+    					name="isImporter" type="string" nillable="true" />
+    				<element maxOccurs="1" minOccurs="0"
+    					name="isExporter" type="string" nillable="true" />
+    				<element maxOccurs="unbounded" minOccurs="0"
+    					name="numberOfEmployees">
+    					<complexType>
+    						<sequence>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="value" type="integer" nillable="true"/>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="informationScopeDescription" type="string" nillable="true"/>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="informationScopeDnBCode" type="integer" nillable="true"/>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="reliabilityDescription" type="string" nillable="true"/>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="reliabilityDnBCode" type="integer" nillable="true"/>
+    							<element maxOccurs="unbounded"
+    								minOccurs="0" name="employeeCategories" type="string" nillable="true"/>
+    							<element maxOccurs="unbounded"
+    								minOccurs="0" name="trend" type="string" nillable="true"/>
+    						</sequence>
+    					</complexType>
+    				</element>
+    				<element maxOccurs="unbounded" minOccurs="0"
+    					name="financials" type="string" nillable="true"/>
+    				<element maxOccurs="unbounded" minOccurs="0"
+    					name="mostSeniorPrincipals">
+    					<complexType>
+    						<sequence>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="givenName" type="string" nillable="true"/>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="familyName" type="string" nillable="true"/>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="fullName" type="string" nillable="true" />
+    							<element maxOccurs="1" minOccurs="0"
+    								name="namePrefix" type="string" nillable="true" />
+    							<element maxOccurs="1" minOccurs="0"
+    								name="nameSuffix" type="string" nillable="true" />
+    							<element maxOccurs="1" minOccurs="0"
+    								name="gender" type="string" nillable="true"/>
+    							<element maxOccurs="unbounded"
+    								minOccurs="0" name="jobTitles">
+    								<complexType>
+    									<sequence>
+    										<element maxOccurs="1"
+    											minOccurs="0" name="title" type="string" />
+    									</sequence>
+    								</complexType>
+    							</element>
+    							<element maxOccurs="unbounded"
+    								minOccurs="0" name="managementResponsibilities">
+    								<complexType>
+    									<sequence>
+    										<element maxOccurs="1"
+    											minOccurs="0" name="description" type="string" />
+    										<element maxOccurs="1"
+    											minOccurs="0" name="mrcCode" type="string" />
+    									</sequence>
+    								</complexType>
+    							</element>
+    						</sequence>
+    					</complexType>
+    				</element>
+    				<element maxOccurs="unbounded" minOccurs="0"
+    					name="currentPrincipals">
+    					<complexType>
+    						<sequence>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="givenName" type="string" nillable="true"/>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="familyName" type="string" nillable="true"/>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="fullName" type="string" nillable="true" />
+    							<element maxOccurs="1" minOccurs="0"
+    								name="namePrefix" type="string" nillable="true" />
+    							<element maxOccurs="1" minOccurs="0"
+    								name="nameSuffix" type="string" nillable="true" />
+    							<element maxOccurs="1" minOccurs="0"
+    								name="gender" type="string" nillable="true"/>
+    							<element maxOccurs="unbounded"
+    								minOccurs="0" name="jobTitles">
+    								<complexType>
+    									<sequence>
+    										<element maxOccurs="1"
+    											minOccurs="0" name="title" type="string" />
+    									</sequence>
+    								</complexType>
+    							</element>
+    							<element maxOccurs="unbounded"
+    								minOccurs="0" name="managementResponsibilities">
+    								<complexType>
+    									<sequence>
+    										<element maxOccurs="1"
+    											minOccurs="0" name="description" type="string" />
+    										<element maxOccurs="1"
+    											minOccurs="0" name="mrcCode" type="string" />
+    									</sequence>
+    								</complexType>
+    							</element>
+    						</sequence>
+    					</complexType>
+    				</element>
+    				<element maxOccurs="1" minOccurs="0"
+    					name="socioEconomicInformation">
+    					<complexType>
+    						<sequence>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="isMinorityOwned" type="boolean" nillable="true"/>
+    							<element maxOccurs="1" minOccurs="0"
+    								name="isSmallBusiness" type="string" nillable="true" />
+    						</sequence>
+    					</complexType>
+    				</element>
+    				<element maxOccurs="1" minOccurs="0"
+    					name="isStandalone" type="boolean" nillable="true"/>
+    				<element maxOccurs="1" minOccurs="0"
+    					name="corporateLinkage">
+    					<complexType>
+    						<sequence />
+    					</complexType>
+    				</element>
+    			</sequence>
+    		</complexType>
+    	</element>
+    </sequence>
+  </complexType>
+  <element name="seedFileFormatElement"
+  	type="tns:seedFileFormatElementType" />
+
+
+
+
+  
+
+
+
+
+
+
+</schema>

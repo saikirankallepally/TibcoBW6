@@ -1,0 +1,12 @@
+{"records": [
+    {
+        "jsonSchemaLocation": "/Assignments/Service Descriptors/assignment2.Resource1-Resource1.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://tns.tibco.com/bw/json/1666844477897"
+    },
+    {
+        "jsonSchemaLocation": "/Assignments/Service Descriptors/assignment3.Resource2-Resource2.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.example.org/Postgres"
+    }
+]}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/columns" xmlns:tns="http://www.example.org/columns" elementFormDefault="qualified">
+
+    <element name="Columns" type="tns:Records"></element>
+
+    <complexType name="columnType">
+    	<sequence>
+    		<element name="ColumnName" type="string"
+    			maxOccurs="1" minOccurs="0">
+    		</element>
+    		<element name="Values" type="tns:ValueType" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="ValueType">
+    	<sequence>
+    		<element name="Value" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="Records">
+    	<sequence>
+    		<element name="record" type="tns:columnType" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+</schema>

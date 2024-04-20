@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/BankDBFormat" xmlns:tns="http://www.example.org/BankDBFormat" elementFormDefault="qualified">
+
+    
+
+
+    <element name="BankDBFormat" type="tns:BankFormatType"></element>
+    
+    <complexType name="BankFormatType">
+    	<sequence>
+    		<element name="BankFormat" type="tns:Bank" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="Bank">
+    	<sequence>
+    		<element name="Code" type="string"></element>
+    		<element name="Name" type="string"></element>
+    		<element name="Address" type="string"></element>
+    	</sequence>
+    </complexType>
+</schema>

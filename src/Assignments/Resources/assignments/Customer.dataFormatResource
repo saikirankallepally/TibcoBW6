@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CustomerData="http://www.example.org/CustomerData" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_7lCOMFW9Ee2HW7mEqlx3AA" name="assignments.Customer" type="dataformat:DataFormat">
+  <imports xmi:id="_9IeW4FW9Ee2HW7mEqlx3AA" importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/CustomerData"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_7lCOMVW9Ee2HW7mEqlx3AA" formatType="Delimiter separated" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="CustomerData:Customers" fieldOffsetsStr="Customer(0,0)">
+    <fieldOffsets xmi:id="_9JDlsFW9Ee2HW7mEqlx3AA" name="Customer"/>
+  </jndi:configuration>
+</jndi:namedResource>

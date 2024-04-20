@@ -1,0 +1,21 @@
+{
+    "records": [{
+        "name": "Cloud",
+        "items": [],
+        "url": "https://integration.cloud.tibco.com:443"
+    }],
+    "resources": [
+        {
+            "location": "Service Descriptors/assignment5.Resource-Resource.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/assignment2.Resource1-Resource1.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/assignment3.Resource2-Resource2.json",
+            "type": "generated"
+        }
+    ]
+}

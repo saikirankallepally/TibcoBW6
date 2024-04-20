@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:EmployeeData="http://www.example.org/EmployeeData" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_mc1-oFA6Ee2Gou51xYDxTQ" name="assignments.EmployeeDataFormat" type="dataformat:DataFormat">
+  <imports xmi:id="_5SBfcFA7Ee2Gou51xYDxTQ" importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/EmployeeData"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_mc7eMFA6Ee2Gou51xYDxTQ" formatType="Delimiter separated" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="EmployeeData:Employees" fieldOffsetsStr="EmployeeId(0,0)&#xA;EmployeeName(0,0)&#xA;Designation(0,0)&#xA;ManagerName(0,0)&#xA;YearOfExp(0,0)">
+    <fieldOffsets xmi:id="_5SeLYFA7Ee2Gou51xYDxTQ" name="EmployeeId"/>
+    <fieldOffsets xmi:id="_5SeLYVA7Ee2Gou51xYDxTQ" name="EmployeeName"/>
+    <fieldOffsets xmi:id="_5SeLYlA7Ee2Gou51xYDxTQ" name="Designation"/>
+    <fieldOffsets xmi:id="_5SeLY1A7Ee2Gou51xYDxTQ" name="ManagerName"/>
+    <fieldOffsets xmi:id="_5SeLZFA7Ee2Gou51xYDxTQ" name="YearOfExp"/>
+  </jndi:configuration>
+</jndi:namedResource>

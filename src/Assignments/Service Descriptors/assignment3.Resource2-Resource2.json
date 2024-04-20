@@ -1,0 +1,65 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Resource2",
+    "description" : "Resource2 service"
+  },
+  "host" : "localhost:8089",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/resource2" : {
+      "post" : {
+        "summary" : "postResource2",
+        "description" : "postResource2",
+        "operationId" : "post-resource2",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a Response to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/Response"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "Response" : {
+      "type" : "object",
+      "properties" : {
+        "Records" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Records",
+            "uniqueItems" : false
+          }
+        }
+      }
+    },
+    "Records" : {
+      "type" : "object",
+      "required" : [ "Column", "Value" ],
+      "properties" : {
+        "Column" : {
+          "type" : "string"
+        },
+        "Value" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

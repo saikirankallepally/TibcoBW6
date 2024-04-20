@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/CustomerData" xmlns:tns="http://www.example.org/CustomerData" elementFormDefault="qualified">
+
+    <element name="Customers" type="tns:CustomerType"></element>
+    
+    <complexType name="CustomerType">
+    	<sequence>
+    		<element name="Customer" type="tns:CustomerData" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="CustomerData">
+    	<sequence>
+    		<element name="FIRSTNAME" type="string"></element>
+    		<element name="MIDDLENAME" type="string"></element>
+    		<element name="LASTNAME" type="string"></element>
+    		<element name="EMAIL" type="string"></element>
+    		<element name="GENDER" type="string"></element>
+    		<element name="BIRTHDATE" type="string"></element>
+    		<element name="MOBILENO" type="string"></element>
+    		<element name="ACCOUNT" type="string"></element>
+    		<element name="BRANCHCODE" type="string"></element>
+    		<element name="NATIONALITY" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="Customers2" type="tns:Customer2"></element>
+    
+    <complexType name="Customer2">
+    	<sequence>
+    		<element name="Customer" type="tns:Customer2Data" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="Customer2Data">
+    	<sequence>
+    		<element name="Name" type="string"></element>
+    		<element name="Email" type="string"></element>
+    		<element name="Gender" type="string"></element>
+    		<element name="Age" type="string"></element>
+    		<element name="Contact" type="string"></element>
+    		<element name="AccountNumber" type="string"></element>
+    		<element name="Code" type="string"></element>
+    		<element name="BranchName" type="string"></element>
+    		<element name="Address" type="string"></element>
+    		<element name="Currency" type="string"></element>
+    		<element name="CountryCode" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="BranchDetails">
+    	<sequence>
+    		<element name="Code" type="string"></element>
+    		<element name="Name" type="string"></element>
+    		<element name="Address" type="string"></element>
+    	</sequence>
+    </complexType>
+
+</schema>

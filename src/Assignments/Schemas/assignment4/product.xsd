@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/product" xmlns:tns="http://www.example.org/product" elementFormDefault="qualified">
+
+    <element name="Products" type="tns:ProductType"></element>
+    
+    <complexType name="ProductType">
+    	<sequence>
+    		<element name="Product" type="tns:prod" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="prod">
+    	<sequence>
+    		<element name="ProductId" type="string"></element>
+    		<element name="ProductName" type="string"></element>
+    		<element name="ProductGroup" type="tns:Groups"
+    			maxOccurs="1" minOccurs="0">
+    		</element>
+    		<element name="ProductStatus" type="boolean">
+    		</element>
+    		<element name="ProductAddDate" type="date"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="Groups">
+    	<sequence>
+    		<element name="Group" type="string" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+</schema>

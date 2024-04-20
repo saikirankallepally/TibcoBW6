@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/EmployeeData" xmlns:tns="http://www.example.org/EmployeeData" elementFormDefault="qualified">
+
+    <element name="Employees" type="tns:Employee"></element>
+    
+    <complexType name="Employee">
+    	<sequence>
+    		<element name="EmployeeId" type="string"></element>
+    		<element name="EmployeeName" type="string"></element>
+    		<element name="Designation" type="string"></element>
+    		<element name="ManagerName" type="string"></element>
+    		<element name="YearOfExp" type="string"></element>
+    	</sequence>
+    </complexType>
+</schema>

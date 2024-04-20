@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:ProductService="http://www.tibco.com/ProductService/" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:assignment3="http://www.tibco.com/assignment3/" xmlns:axis2="http://xsd.tns.tibco.com/bw/models/binding/soap/axis2" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:emp="http://www.tibco.com/emp/" xmlns:employee="http://www.tibco.com/employee/" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_1blaYFAwEe2wHa8ysJEf0Q" targetNamespace="http://tns.tibco.com/bw/composite/Assignments" name="Assignments" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_cPrR8FUaEe2Ar6LpW2Kp8g" name="resource" promote="ComponentResource/resource">
+    <sca:interface.wsdl xmi:id="_cPu8UFUaEe2Ar6LpW2Kp8g" interface="http://xmlns.example.com/20221026160916PLT#wsdl.interface(resource)" scaext:wsdlLocation="../Processes/assignment5/Resource.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_cP57cFUaEe2Ar6LpW2Kp8g" name="RestService" path="/resource" docBasePath="http://localhost:7777/Assignments" docResourcePath="Resource" basePath="/" connector="assignments.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/assignment5.Resource-Resource.json">
+      <operation xmi:id="_cP-M4FUaEe2Ar6LpW2Kp8g" operationName="post" nickname="post-resource" httpMethod="POST" notes="postResource" responseStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <advancedConfig xmi:id="_cP7woFUaEe2Ar6LpW2Kp8g" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_cP-M4VUaEe2Ar6LpW2Kp8g" bindingName="RestService"/>
+  </sca:service>
+  <sca:service xmi:id="_PQ6rUlWwEe2M27JatP8V6g" name="resource1" promote="ComponentResource1/resource1">
+    <sca:interface.wsdl xmi:id="_PRXXQFWwEe2M27JatP8V6g" interface="http://xmlns.example.com/20221027100134PLT#wsdl.interface(resource1)" scaext:wsdlLocation="../Processes/assignment2/Resource1.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_PRhIQFWwEe2M27JatP8V6g" name="RestService1" path="/resource1" docBasePath="http://localhost:7777/Assignments" docResourcePath="Resource1" basePath="/" connector="assignments.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/assignment2.Resource1-Resource1.json">
+      <operation xmi:id="_PRhIQlWwEe2M27JatP8V6g" operationName="post" nickname="post-resource1" httpMethod="POST" notes="postResource1" responseStyle="element" requestStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_PRujoFWwEe2M27JatP8V6g"/>
+      <advancedConfig xmi:id="_PRhIQVWwEe2M27JatP8V6g" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_PRhIQ1WwEe2M27JatP8V6g" bindingName="RestService1"/>
+  </sca:service>
+  <sca:service xmi:id="_gU70EVhwEe26sd5eLvQfYg" name="resource2" promote="ComponentResource2/resource2">
+    <sca:interface.wsdl xmi:id="_gVFlEVhwEe26sd5eLvQfYg" interface="http://xmlns.example.com/20221030220254PLT#wsdl.interface(resource2)" scaext:wsdlLocation="../Processes/assignment3/Resource2.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_gVIoYFhwEe26sd5eLvQfYg" name="RestService2" path="/resource2" docBasePath="http://localhost:7777/Assignments" docResourcePath="Resource2" basePath="/" connector="assignments.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/assignment3.Resource2-Resource2.json">
+      <operation xmi:id="_gVSZYFhwEe26sd5eLvQfYg" operationName="post" nickname="post-resource2" httpMethod="POST" notes="postResource2" responseStyle="element" requestStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_gWViQFhwEe26sd5eLvQfYg"/>
+      <advancedConfig xmi:id="_gVIoYVhwEe26sd5eLvQfYg" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_gVSZYVhwEe26sd5eLvQfYg" bindingName="RestService2"/>
+  </sca:service>
+  <sca:service xmi:id="_qTT9oFpxEe2pI4440A2mog" name="ProductService" promote="ComponentProductService/ProductService">
+    <sca:interface.wsdl xmi:id="_qTY2IFpxEe2pI4440A2mog" interface="http://www.tibco.com/ProductService/#wsdl.interface(ProductService)" scaext:wsdlLocation="../Service%20Descriptors/ProductService.wsdl"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_qTs_MFpxEe2pI4440A2mog" name="SOAPServiceBinding1" targetNamespace="http://www.tibco.com/95d216a7e57b43ce8eb1d427f69ca913/SOAPServiceBinding1" portTypeQName="ProductService:ProductService" transportBindingType="HTTP" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/Assignments/Service%20Descriptors/ProductService.wsdl">
+      <bindingType xmi:id="_qTzs4FpxEe2pI4440A2mog"/>
+      <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_MUThUFpzEe2pI4440A2mog" endpointURI="/SOAPServiceBinding1/productService/" httpConnector="assignments.HTTPConnectorResource"/>
+      <operationConfiguration xmi:id="_qT0T8FpxEe2pI4440A2mog" operationName="AddOperation" action="AddOperation" actionNeeded="true">
+        <bindingType xmi:id="_qT0T8VpxEe2pI4440A2mog"/>
+        <messageConfiguration xmi:id="_qT0T8lpxEe2pI4440A2mog" messageQName="ProductService:AddOperationRequest" wsdlLocation="platform:/resource/Assignments/Service%20Descriptors/ProductService.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_qT0T81pxEe2pI4440A2mog" partName="parameters" partElementName="ProductService:AddOperation"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_qT0T9FpxEe2pI4440A2mog" messageQName="ProductService:AddOperationResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/Assignments/Service%20Descriptors/ProductService.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_qT0T9VpxEe2pI4440A2mog" partName="parameters" partElementName="ProductService:AddOperationResponse"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_qT0T9lpxEe2pI4440A2mog" messageQName="ProductService:AddOperationFault" messageDirection="FAULT" action="fault" wsdlLocation="platform:/resource/Assignments/Service%20Descriptors/ProductService.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_qT0T91pxEe2pI4440A2mog" partName="parameters" partElementName="ProductService:AddOperationFault"/>
+        </messageConfiguration>
+        <context xmi:id="_qT0UAFpxEe2pI4440A2mog">
+          <inputMapping xmi:id="_qT0UAVpxEe2pI4440A2mog"/>
+          <outputMapping xmi:id="_qT0UAlpxEe2pI4440A2mog" direction="OUTPUT"/>
+          <faultMappings xmi:id="_qT07AFpxEe2pI4440A2mog" direction="FAULT" faultName="fault"/>
+        </context>
+      </operationConfiguration>
+      <operationConfiguration xmi:id="_qT0T-FpxEe2pI4440A2mog" operationName="GetOperation" action="GetOperation" actionNeeded="true">
+        <bindingType xmi:id="_qT0T-VpxEe2pI4440A2mog"/>
+        <messageConfiguration xmi:id="_qT0T-lpxEe2pI4440A2mog" messageQName="ProductService:GetOperationRequest" wsdlLocation="platform:/resource/Assignments/Service%20Descriptors/ProductService.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_qT0T-1pxEe2pI4440A2mog" partName="parameters" partElementName="ProductService:GetOperation"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_qT0T_FpxEe2pI4440A2mog" messageQName="ProductService:GetOperationResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/Assignments/Service%20Descriptors/ProductService.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_qT0T_VpxEe2pI4440A2mog" partName="parameters" partElementName="ProductService:GetOperationResponse"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_qT0T_lpxEe2pI4440A2mog" messageQName="ProductService:GetOperationFault" messageDirection="FAULT" action="fault" wsdlLocation="platform:/resource/Assignments/Service%20Descriptors/ProductService.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_qT0T_1pxEe2pI4440A2mog" partName="parameters" partElementName="ProductService:GetOperationFault"/>
+        </messageConfiguration>
+        <context xmi:id="_qT1iEFpxEe2pI4440A2mog">
+          <inputMapping xmi:id="_qT1iEVpxEe2pI4440A2mog"/>
+          <outputMapping xmi:id="_qT1iElpxEe2pI4440A2mog" direction="OUTPUT"/>
+          <faultMappings xmi:id="_qT1iE1pxEe2pI4440A2mog" direction="FAULT" faultName="fault"/>
+        </context>
+      </operationConfiguration>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_qT1iFFpxEe2pI4440A2mog" bindingName="SOAPServiceBinding1"/>
+  </sca:service>
+  <sca:service xmi:id="_9SYVBFtIEe2n0fA5b8MEtA" name="employee" promote="Componentemployee/employee">
+    <sca:interface.wsdl xmi:id="_9SYVCFtIEe2n0fA5b8MEtA" interface="http://www.tibco.com/employee/#wsdl.interface(employee)" scaext:wsdlLocation="../Service%20Descriptors/employee.wsdl"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_9SYVCltIEe2n0fA5b8MEtA" name="SOAPServiceBinding" targetNamespace="http://www.tibco.com/5c05c253fbe747b2b19faaf73f8b6db6/SOAPServiceBinding" portTypeQName="employee:employee" transportBindingType="HTTP" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/Assignments/Service%20Descriptors/employee.wsdl">
+      <bindingType xmi:id="_9SYVC1tIEe2n0fA5b8MEtA"/>
+      <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_BMVpIFtJEe2n0fA5b8MEtA" endpointURI="/SOAPServiceBinding/employee/" httpConnector="assignments.HTTPConnectorResource"/>
+      <operationConfiguration xmi:id="_9SYVDFtIEe2n0fA5b8MEtA" operationName="NewOperation" action="NewOperation" actionNeeded="true">
+        <bindingType xmi:id="_9SYVDVtIEe2n0fA5b8MEtA"/>
+        <messageConfiguration xmi:id="_9SYVDltIEe2n0fA5b8MEtA" messageQName="employee:NewOperationRequest" wsdlLocation="platform:/resource/Assignments/Service%20Descriptors/employee.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_9SYVD1tIEe2n0fA5b8MEtA" partName="parameters" partElementName="employee:NewOperation"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_9SYVEFtIEe2n0fA5b8MEtA" messageQName="employee:NewOperationResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/Assignments/Service%20Descriptors/employee.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_9SYVEVtIEe2n0fA5b8MEtA" partName="parameters" partElementName="employee:NewOperationResponse"/>
+        </messageConfiguration>
+        <context xmi:id="_9SYVEltIEe2n0fA5b8MEtA">
+          <inputMapping xmi:id="_9SYVE1tIEe2n0fA5b8MEtA"/>
+          <outputMapping xmi:id="_9SYVFFtIEe2n0fA5b8MEtA" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_9SYVFVtIEe2n0fA5b8MEtA" bindingName="SOAPServiceBinding"/>
+  </sca:service>
+  <sca:property xmi:id="_3G9-IFAwEe2wHa8ysJEf0Q" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_3HI9QFAwEe2wHa8ysJEf0Q" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_3HLZgFAwEe2wHa8ysJEf0Q" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_3HMnoFAwEe2wHa8ysJEf0Q" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_3HMnoVAwEe2wHa8ysJEf0Q" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_3HMnolAwEe2wHa8ysJEf0Q" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_3HMno1AwEe2wHa8ysJEf0Q" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_3HMnpFAwEe2wHa8ysJEf0Q" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_3HVxkFAwEe2wHa8ysJEf0Q" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_2WrwsFAwEe2wHa8ysJEf0Q" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_2WrwsVAwEe2wHa8ysJEf0Q" processName="assignments6.Process"/>
+  </sca:component>
+  <sca:component xmi:id="_3pncgFESEe2RHJbSoYB4Gw" name="Component1Process" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_3pncgVESEe2RHJbSoYB4Gw" processName="assignment5.Process"/>
+  </sca:component>
+  <sca:component xmi:id="_LGhnYFKjEe2FUPS8ghicmQ" name="ComponentJmsreciever" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_LGhnYVKjEe2FUPS8ghicmQ" processName="assignment5.Jmsreciever"/>
+  </sca:component>
+  <sca:component xmi:id="_cPjWIFUaEe2Ar6LpW2Kp8g" name="ComponentResource" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_cPjWIVUaEe2Ar6LpW2Kp8g" processName="assignment5.Resource"/>
+    <sca:service xmi:id="_cPnnkFUaEe2Ar6LpW2Kp8g" name="resource">
+      <sca:interface.wsdl xmi:id="_cPo1sFUaEe2Ar6LpW2Kp8g" interface="http://xmlns.example.com/20221026160916PLT#wsdl.interface(resource)" scaext:wsdlLocation="../Processes/assignment5/Resource.bwp"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_PQnwYFWwEe2M27JatP8V6g" name="ComponentResource1" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_PQnwYVWwEe2M27JatP8V6g" processName="assignment2.Resource1"/>
+    <sca:service xmi:id="_PQ6rUFWwEe2M27JatP8V6g" name="resource1">
+      <sca:interface.wsdl xmi:id="_PQ6rUVWwEe2M27JatP8V6g" interface="http://xmlns.example.com/20221027100134PLT#wsdl.interface(resource1)" scaext:wsdlLocation="../Processes/assignment2/Resource1.bwp"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_813gwFW5Ee2HW7mEqlx3AA" name="Component1Process1" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_813gwVW5Ee2HW7mEqlx3AA" processName="assignment2.Process"/>
+  </sca:component>
+  <sca:component xmi:id="_URNjgFhwEe26sd5eLvQfYg" name="Component1Process2" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_URNjgVhwEe26sd5eLvQfYg" processName="assignment3.Process"/>
+  </sca:component>
+  <sca:component xmi:id="_gUxcAFhwEe26sd5eLvQfYg" name="ComponentResource2" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_gUxcAVhwEe26sd5eLvQfYg" processName="assignment3.Resource2"/>
+    <sca:service xmi:id="_gU7NAFhwEe26sd5eLvQfYg" name="resource2">
+      <sca:interface.wsdl xmi:id="_gU70EFhwEe26sd5eLvQfYg" interface="http://xmlns.example.com/20221030220254PLT#wsdl.interface(resource2)" scaext:wsdlLocation="../Processes/assignment3/Resource2.bwp"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_aYdK4FmqEe2K8qOE_YmTsA" name="ComponentTopicReciever" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_aYdK4VmqEe2K8qOE_YmTsA" processName="assignments3sub3.TopicReciever"/>
+  </sca:component>
+  <sca:component xmi:id="_jQGEgFmrEe2K8qOE_YmTsA" name="Componentq1Reciever" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_jQGEgVmrEe2K8qOE_YmTsA" processName="assignments3sub3.q1Reciever"/>
+  </sca:component>
+  <sca:component xmi:id="_lQ_lQFmrEe2K8qOE_YmTsA" name="Componentq2Reciever" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_lQ_lQVmrEe2K8qOE_YmTsA" processName="assignments3sub3.q2Reciever"/>
+  </sca:component>
+  <sca:component xmi:id="_qTLawFpxEe2pI4440A2mog" name="ComponentProductService" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_qTLawVpxEe2pI4440A2mog" processName="assignment4.ProductService"/>
+    <sca:service xmi:id="_qTOeEFpxEe2pI4440A2mog" name="ProductService">
+      <sca:interface.wsdl xmi:id="_qTPFIFpxEe2pI4440A2mog" interface="http://www.tibco.com/ProductService/#wsdl.interface(ProductService)" scaext:wsdlLocation="../Service%20Descriptors/ProductService.wsdl"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_9SYVAFtIEe2n0fA5b8MEtA" name="Componentemployee" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_9SYVAVtIEe2n0fA5b8MEtA" processName="assignments3sub3.employee"/>
+    <sca:service xmi:id="_9SYVAltIEe2n0fA5b8MEtA" name="employee">
+      <sca:interface.wsdl xmi:id="_9SYVA1tIEe2n0fA5b8MEtA" interface="http://www.tibco.com/employee/#wsdl.interface(employee)" scaext:wsdlLocation="../Service%20Descriptors/employee.wsdl"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>
